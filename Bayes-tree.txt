@@ -6,3 +6,13 @@ http://www.robertlanfear.com/partitionfinder/tutorial/
 # python “<PartitionFinder.py>” “<InputFoldername>” 目录下保存.phy和partition_finder.cfg（不要改名）文件
 
 python /data01/wangyf/software/partitionfinder-2.1.1/PartitionFinder.py /data01/wangyf/project2/bi -r -p 5
+
+
+mpirun -np 20 mb # 调用20个核
+exe /data01/wangyf/project2/bi/Aligned-Schizothorax-Sept20.nex
+
+# 绘制收敛的折线图
+ggplot(df, aes(Iteration, ASDSF, group = group, colour = group, shape = group)) + 
+  geom_line() + 
+  geom_point() + 
+  scale_y_continuous(limits = c(0, 0.04))
