@@ -1,2 +1,8 @@
-有空就整理
 https://biojuse.com/2023/07/06/%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%BB%BA%E6%A0%91%E4%B9%8B%20Mrbayes%20%E7%AF%87/
+http://www.robertlanfear.com/partitionfinder/tutorial/
+
+# comparing partitioning schemes for DNA sequence alignments using PartitionFinder2
+# -r： 使用 RAxML而不是PhyML；-p： 使用处理器的数目
+# python “<PartitionFinder.py>” “<InputFoldername>” 目录下保存.phy和partition_finder.cfg（不要改名）文件
+
+python /data01/wangyf/software/partitionfinder-2.1.1/PartitionFinder.py /data01/wangyf/project2/bi -r -p 5
